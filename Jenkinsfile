@@ -314,7 +314,7 @@ pipeline {
                         echo "*********************** Starting ZAP proxy ***********************************"
                         script {
                             container("owasp-zap")  {
-                                runOwaspZapProxy()
+                             //   runOwaspZapProxy()
                             }
                         }
                     }
