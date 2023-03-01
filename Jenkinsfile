@@ -149,8 +149,8 @@ pipeline {
     // def namespace = "dx-golden-path-namespace"
     def imagetype = "sindalah-demo-tech-api"
     def compartment_id='ocid1.compartment.oc1..aaaaaaaaeg7m7tc6lbn6ca4c22dddfwhzssp2mfsg676nszu2kexf4grs4uq'
-    def tag = "1.0.1" // tag for docker image (podman)
-    def version = "1.0.1"
+    def tag = "1.1.1" // tag for docker image (podman)
+    def version = "1.1.1"
     def BRANCH_NAME = "main"
   }
 
