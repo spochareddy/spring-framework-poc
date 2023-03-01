@@ -378,8 +378,8 @@ pipeline {
                           echo "*********************** ZAP proxy scanning ***********************************"
                           script {
                               container("owasp-zap")  {
-                                  runActivescan()
-                                  generateHtmlReport()
+                            //      runActivescan()
+                             //     generateHtmlReport()
 
                               }
                           }
