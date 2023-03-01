@@ -1,5 +1,5 @@
 # Dockerfile
-FROM openjdk:latest
+FROM alpine:latest
 WORKDIR /app
 RUN addgroup --system javauser && adduser -S -s /usr/sbin/nologin -G javauser javauser
 ARG JAR_FILE
