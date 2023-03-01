@@ -322,9 +322,7 @@ pipeline {
 
     // // 12 - Deploy
    stage('Deploy') {
-    when{
-	      branch 'master'
-      }
+   
       steps {
         container('helm') {
 		//withCredentials([file(credentialsId: 'PRIVATE_KEY', variable: 'key'),file(credentialsId: 'config', variable: 'CONFIG')]) {
