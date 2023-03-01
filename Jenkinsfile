@@ -147,7 +147,7 @@ pipeline {
     // def PROJECT_URL = "https://github.com/NEOM-KSA/dx-golden-path-v0.1.git"
     // GIT_URL = "https://github.com/NEOM-KSA/dx-golden-path-v0.1-jenkins-sharedlib-trufflehog_nix.git" // GIT_URL for TruffleHog - Example: "https://$GIT_HUB@github.com/mobilityhouse/testci.git" // newly defined for TruffleHog
     // def namespace = "dx-golden-path-namespace"
-    def imagetype = "sindalah-demo-tech-api"
+    def imagetype = "Sindalah_Tech_and_Digital_Program-Dev"
     def compartment_id='ocid1.compartment.oc1..aaaaaaaaeg7m7tc6lbn6ca4c22dddfwhzssp2mfsg676nszu2kexf4grs4uq'
     def tag = "1.1.1" // tag for docker image (podman)
     def version = "1.1.1"
