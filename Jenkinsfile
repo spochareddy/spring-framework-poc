@@ -359,7 +359,7 @@ pipeline {
     //   // 13 - BDD Tests
     //   /*stage('BDD Tests') {
     //         when{
-    //             branch 'master'
+    //             branch 'main'
     //         }
     //         steps{
     //           echo "*********************** Wallet app domain bdd trigger ${env.DOMAIN_BDD_TEST_DIR}***********************************"
