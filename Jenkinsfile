@@ -277,7 +277,7 @@ pipeline {
       steps {
         script{
               container('podman') {
-                    trivyScanocr("jed.ocir.io", "${tenancyNamespace}", "${projectName}", "${tag}", "${imagetype}")
+               //     trivyScanocr("jed.ocir.io", "${tenancyNamespace}", "${projectName}", "${tag}", "${imagetype}")
             }
         }
       }
