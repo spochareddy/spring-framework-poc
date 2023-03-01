@@ -2,4 +2,4 @@
 security:
   jwt:
     secret: secret
-url: http://localhost:9090/api/v1/contacts
+url: https://localhost:9090/api/v1/contacts
