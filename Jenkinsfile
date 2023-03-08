@@ -140,7 +140,7 @@ pipeline {
     // DB_HOST=credentials('db_host')
     // REDIS_PASSWORD= credentials('redis-password')
 
-    def environmentName = 'sindalah-demo-tech-api'
+    def environmentName = 'sindalah'
     def tenancyNamespace = 'axnfm4jb3i73' // newly defined for ocir push
     def projectName = 'sindalah-demo-tech-api'
     // def releaseName = 'dx-golden-path-release1'
@@ -148,7 +148,7 @@ pipeline {
     // GIT_URL = "https://github.com/NEOM-KSA/dx-golden-path-v0.1-jenkins-sharedlib-trufflehog_nix.git" // GIT_URL for TruffleHog - Example: "https://$GIT_HUB@github.com/mobilityhouse/testci.git" // newly defined for TruffleHog
     // def namespace = "dx-golden-path-namespace"
     def imagetype = "sindalah_tech_and_digital_program-dev"
-    def compartment_id='ocid1.compartment.oc1..aaaaaaaaeg7m7tc6lbn6ca4c22dddfwhzssp2mfsg676nszu2kexf4grs4uq'
+    def compartment_id='ocid1.compartment.oc1..aaaaaaaarghfrpamz7t5oslsdywib7iuouhpfsguerejd6kvxxcakdipwirq'
     def tag = "1.1.1" // tag for docker image (podman)
     def version = "1.1.1"
     def BRANCH_NAME = "main"
@@ -277,7 +277,7 @@ pipeline {
       steps {
         script{
               container('podman') {
-               //     trivyScanocr("jed.ocir.io", "${tenancyNamespace}", "${projectName}", "${tag}", "${imagetype}")
+                   trivyScanocr("jed.ocir.io", "${tenancyNamespace}", "${projectName}", "${tag}", "${imagetype}")
             }
         }
       }
@@ -299,7 +299,7 @@ pipeline {
                         }
                         // tfci.config()
                             // call (String credentialsID, String ocrRegistry, String ocrNamespace, String name, String tag, String imageType)
-                            podmanPush("ocr_login", "jed.ocir.io", "${tenancyNamespace}", "${projectName}", "${tag}", "${imagetype}")
+                            podmanPush("OCISabari", "jed.ocir.io", "${tenancyNamespace}", "${projectName}", "${tag}", "${imagetype}")
                       }
                 }
            }
@@ -314,7 +314,7 @@ pipeline {
                         echo "*********************** Starting ZAP proxy ***********************************"
                         script {
                             container("owasp-zap")  {
-                             //   runOwaspZapProxy()
+                               runOwaspZapProxy()
                             }
                         }
                     }
