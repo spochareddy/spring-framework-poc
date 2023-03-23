@@ -142,7 +142,7 @@ pipeline {
 
     def environmentName = 'sindalah'
     def tenancyNamespace = 'axnfm4jb3i73' // newly defined for ocir push
-    def projectName = 'sindalah-demo-tech-api'
+    def projectName = 'sindalah'
     // def releaseName = 'dx-golden-path-release1'
     // def PROJECT_URL = "https://github.com/NEOM-KSA/dx-golden-path-v0.1.git"
     // GIT_URL = "https://github.com/NEOM-KSA/dx-golden-path-v0.1-jenkins-sharedlib-trufflehog_nix.git" // GIT_URL for TruffleHog - Example: "https://$GIT_HUB@github.com/mobilityhouse/testci.git" // newly defined for TruffleHog
@@ -266,7 +266,8 @@ pipeline {
         echo 'I am inside Docker Image Build'
         script{
                container('podman') {
-                podmanBuild("jed.ocir.io", "${tenancyNamespace}", "${projectName}", "${tag}", "${imagetype}")
+              //  podmanBuild("jed.ocir.io", "${tenancyNamespace}", "${projectName}", "${tag}", "${imagetype}")
+		           podmanBuild("jed.ocir.io", "${tenancyNamespace}", "${projectName}", "${tag}")
                }
             }
         }
