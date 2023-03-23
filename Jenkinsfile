@@ -299,7 +299,8 @@ pipeline {
                         }
                         // tfci.config()
                             // call (String credentialsID, String ocrRegistry, String ocrNamespace, String name, String tag, String imageType)
-                            podmanPush("OCISabari", "jed.ocir.io", "${tenancyNamespace}", "${projectName}", "${tag}", "${imagetype}")
+                            //podmanPush("OCISabari", "jed.ocir.io", "${tenancyNamespace}", "${projectName}", "${tag}", "${imagetype}")
+			      podmanPush("OCISabari", "jed.ocir.io", "${tenancyNamespace}","${tag}", "${imagetype}")
                       }
                 }
            }
