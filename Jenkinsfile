@@ -147,7 +147,7 @@ pipeline {
     // def PROJECT_URL = "https://github.com/NEOM-KSA/dx-golden-path-v0.1.git"
     // GIT_URL = "https://github.com/NEOM-KSA/dx-golden-path-v0.1-jenkins-sharedlib-trufflehog_nix.git" // GIT_URL for TruffleHog - Example: "https://$GIT_HUB@github.com/mobilityhouse/testci.git" // newly defined for TruffleHog
     // def namespace = "dx-golden-path-namespace"
-    def imagetype = "sindalah_tech_and_digital_program-dev"
+    def imagetype = "development"
     def compartment_id='ocid1.compartment.oc1..aaaaaaaarghfrpamz7t5oslsdywib7iuouhpfsguerejd6kvxxcakdipwirq'
     def tag = "1.1.1" // tag for docker image (podman)
     def version = "1.1.1"
@@ -266,8 +266,9 @@ pipeline {
         echo 'I am inside Docker Image Build'
         script{
                container('podman') {
-              //  podmanBuild("jed.ocir.io", "${tenancyNamespace}", "${projectName}", "${tag}", "${imagetype}")
-		           podmanBuild("jed.ocir.io", "${tenancyNamespace}", "${projectName}", "${tag}")
+                podmanBuild("jed.ocir.io", "${tenancyNamespace}", "${projectName}", "${tag}", "${imagetype}")
+		  //     sh "podman build -t jed.ocir.io/${tenancyNamespace}/${tag} ."
+		       //    podmanBuild("jed.ocir.io", "${tenancyNamespace}", "${projectName}", "${tag}")
                }
             }
         }
@@ -300,8 +301,8 @@ pipeline {
                         }
                         // tfci.config()
                             // call (String credentialsID, String ocrRegistry, String ocrNamespace, String name, String tag, String imageType)
-                            //podmanPush("OCISabari", "jed.ocir.io", "${tenancyNamespace}", "${projectName}", "${tag}", "${imagetype}")
-			      podmanPush("OCISabari", "jed.ocir.io", "${tenancyNamespace}","${tag}", "${imagetype}")
+                            podmanPush("OCISabari", "jed.ocir.io", "${tenancyNamespace}", "${projectName}", "${tag}", "${imagetype}")
+			      //podmanPush("OCISabari", "jed.ocir.io", "${tenancyNamespace}","${tag}", "${imagetype}")
                       }
                 }
            }
