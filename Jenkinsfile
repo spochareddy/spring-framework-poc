@@ -142,12 +142,12 @@ pipeline {
 
     def environmentName = 'sindalah'
     def tenancyNamespace = 'axnfm4jb3i73' // newly defined for ocir push
-    def projectName = 'sindalah'
+    def projectName = 'development'
     // def releaseName = 'dx-golden-path-release1'
     // def PROJECT_URL = "https://github.com/NEOM-KSA/dx-golden-path-v0.1.git"
     // GIT_URL = "https://github.com/NEOM-KSA/dx-golden-path-v0.1-jenkins-sharedlib-trufflehog_nix.git" // GIT_URL for TruffleHog - Example: "https://$GIT_HUB@github.com/mobilityhouse/testci.git" // newly defined for TruffleHog
     // def namespace = "dx-golden-path-namespace"
-    def imagetype = "development"
+    def imagetype = "sindalah"
     def compartment_id='ocid1.compartment.oc1..aaaaaaaarghfrpamz7t5oslsdywib7iuouhpfsguerejd6kvxxcakdipwirq'
     def tag = "1.1.1" // tag for docker image (podman)
     def version = "1.1.1"
