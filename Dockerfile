@@ -1,5 +1,6 @@
 # Dockerfile
-FROM alpine:latest
+FROM eclipse-temurin:17-jdk-alpine
+#FROM alpine:latest
 WORKDIR /app
 RUN addgroup --system javauser && adduser -S -s /usr/sbin/nologin -G javauser javauser
 ARG JAR_FILE
